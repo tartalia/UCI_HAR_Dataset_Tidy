@@ -24,4 +24,3 @@ download_data <- function() {
                 print("Dataset already exists")
         }
 }
-
