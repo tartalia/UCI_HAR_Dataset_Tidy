@@ -1,3 +1,4 @@
-source("./src/download_data.R")
+source("./src/dataset.R")
 
-download_data()
+ds <- dataset()
+ds$download()
