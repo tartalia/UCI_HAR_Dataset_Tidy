@@ -1,4 +1,13 @@
-source("./src/dataset.R")
+source("./src/har_dataset.R")
 
-ds <- dataset()
-ds$download()
+harDs <- har.dataset()
+
+# download dataset
+harDs$download()
+
+# merge test and train datasets
+mergedDs <- harDs$mergeTestAndTrain()
+
+# select mean and std variables
+meanAndStdDs <- harDs$selectMeanAndStdMeasures()
+
