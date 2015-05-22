@@ -1,4 +1,4 @@
-library(utils)
+library(dplyr)
 
 # Humam Activity Recognition dataset library
 # Download and unzip dataset if the dataset do not exist.
@@ -12,7 +12,7 @@ har.dataset <- function() {
         mergedTestDataset <- NULL
         mergedTrainDataset <- NULL       
         mergedDataset <- NULL
-        meanStdDataset <- NULL
+        summarisedDataset <- NULL
 
         getDatasetPath <- function() datasetPath
         getMergedTestDataset <- function() mergedTestDataset
@@ -38,27 +38,17 @@ har.dataset <- function() {
         }
         
         mergeTest <- function() {
-                if (is.null(mergedTestDataset)) {
-                        print("Merging test dataset..")
-                        mergedTestDataset <<- merge(dataset = "test")
-                        print("Done.")
-                        mergedTestDataset
-                } else {
-                        print("Getting cached merged test dataset")
-                        mergedTestDataset
-                }
+                print("Merging test dataset..")
+                mergedTestDataset <<- merge(dataset = "test")
+                print("Done.")
+                mergedTestDataset
         }
         
         mergeTrain <- function() {
-                if (is.null(mergedTrainDataset)) {
-                        print("Merging train dataset..")
-                        mergedTrainDataset <<- merge(dataset = "train")
-                        print("Done.")
-                        mergedTrainDataset
-                } else {
-                        print("Getting cached merged train dataset")
-                        mergedTrainDataset
-                }
+                print("Merging train dataset..")
+                mergedTrainDataset <<- merge(dataset = "train")
+                print("Done.")
+                mergedTrainDataset
         }
         
         merge <- function(dataset) {
@@ -78,16 +68,14 @@ har.dataset <- function() {
                 
                 # load activities, rename activity variable on y and create factor variable
                 activities <- read.table(paste(datasetPath, "/", dataset, "/y_", dataset, ".txt", sep = ""))
-                names(activities)[1] <- "activityId"
-                activityLabels <- read.table(paste(datasetPath, "/activity_labels.txt", sep = ""))
-                activityName <- factor(activities$activityId, labels = activityLabels$V2)
+                names(activities)[1] <- "ActivityId"
                 
                 # load and rename subjects
                 subject <- read.table(paste(datasetPath, "/", dataset, "/subject_", dataset, ".txt", sep = ""))
-                names(subject)[1] <- "subject"
+                names(subject)[1] <- "Subject"
                 
                 # bind variables
-                cbind(subject, activities, activityName, source = dataset, x)
+                cbind(subject, activities, Source = dataset, x)
         }
 
         mergeTestAndTrain <- function() {
@@ -105,12 +93,49 @@ har.dataset <- function() {
                 if (is.null(mergedDataset)) {
                         stop("The datasets are not merged (tip: you need to call dataset$mergeTestAndTrain() before select mean and std)")
                 }
-                meanAndStdMeasures <- grep("subject|activityId|activityName|source|mean\\(|std\\(", names(mergedDataset))
-                meanStdDataset <<- mergedDataset[, meanAndStdMeasures]
-                meanStdDataset
+                meanAndStdMeasures <- grep("Subject|ActivityId|ActivityName|Source|mean\\(|std\\(", names(mergedDataset))
+                mergedDataset <<- mergedDataset[, meanAndStdMeasures]
+                mergedDataset
+        }
+        
+        addActivitiesLabels <- function() {
+                if (is.null(mergedDataset)) {
+                        stop("The datasets are not merged (tip: you need to call dataset$mergeTestAndTrain() before add activities label)")
+                }
+                activitiesLabels <- read.table(paste(datasetPath, "/activity_labels.txt", sep = ""))
+                ActivityName <- factor(mergedDataset$ActivityId, labels = activitiesLabels$V2)
+                # add activities labels
+                mergedDataset <<- cbind(mergedDataset, ActivityName)
+                mergedDataset
+        }
+        
+        renameVariablesNames <- function() {
+                if (is.null(mergedDataset)) {
+                        stop("The datasets are not merged (tip: you need to call dataset$mergeTestAndTrain() before rename variable names)")
+                }
+                variableNames <- names(mergedDataset)
+                variableNames <- gsub("tBody", "TimeBody", variableNames)
+                variableNames <- gsub("fBody", "FrequencyBody", variableNames)
+                variableNames <- gsub("tGravity", "TimeGravity", variableNames)
+                variableNames <- gsub("Acc", "Accelerometer", variableNames)
+                variableNames <- gsub("Gyro", "Gyroscope", variableNames)
+                variableNames <- gsub("Mag", "Magnitude", variableNames)
+                variableNames <- gsub("-mean[(][)]", "Mean", variableNames)
+                variableNames <- gsub("-std[(][)]", "StandardDeviation", variableNames)
+                variableNames <- gsub("-Y", "Y", variableNames)
+                variableNames <- gsub("-X", "X", variableNames)
+                variableNames <- gsub("-Z", "Z", variableNames)
+                names(mergedDataset) <<- variableNames
+                mergedDataset
+        }
+        
+        summarise <- function() {
+                tblMergedDataset <<- tbl_df(mergedDataset)
+                byActivityAndSubject <- tblMergedDataset %>% group_by(ActivityName, Subject)                
+                summarisedDataset <<- byActivityAndSubject %>% summarise_each(funs(mean), grep("Time|Frequency", names(tblMergedDataset)))
+                summarisedDataset
         }
 
-        list(download = download, getDatasetPath = getDatasetPath, getMergedTestDataset = getMergedTestDataset, 
-             mergeTest = mergeTest, getMergedTrainDataset = getMergedTrainDataset, mergeTrain = mergeTrain,
-             mergeTestAndTrain = mergeTestAndTrain, selectMeanAndStdMeasures = selectMeanAndStdMeasures)
+        list(download = download, mergeTestAndTrain = mergeTestAndTrain, selectMeanAndStdMeasures = selectMeanAndStdMeasures,
+             addActivitiesLabels = addActivitiesLabels, renameVariablesNames = renameVariablesNames, summarise = summarise)
 }

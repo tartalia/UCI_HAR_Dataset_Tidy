@@ -1,13 +1,21 @@
 source("./src/har_dataset.R")
 
-harDs <- har.dataset()
+har.dataset <- har.dataset()
 
 # download dataset
-harDs$download()
+har.dataset$download()
 
 # merge test and train datasets
-mergedDs <- harDs$mergeTestAndTrain()
+ds <- har.dataset$mergeTestAndTrain()
 
 # select mean and std variables
-meanAndStdDs <- harDs$selectMeanAndStdMeasures()
+ds <- har.dataset$selectMeanAndStdMeasures()
 
+# add descriptive activities names
+ds <- har.dataset$addActivitiesLabels()
+
+# rename variable names
+ds <- har.dataset$renameVariablesNames()
+
+# summarize dataset (calculate mean on each variable) by activity and subject
+sds <- har.dataset$summarise()
