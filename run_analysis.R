@@ -18,4 +18,8 @@ ds <- har.dataset$addActivitiesLabels()
 ds <- har.dataset$renameVariablesNames()
 
 # summarize dataset (calculate mean on each variable) by activity and subject
-sds <- har.dataset$summarise()
+sds <- har.dataset$summarize()
+
+# write summarized (tidy) dataset to filesystem (into the output folder)
+har.dataset$saveSummarized()
+
