@@ -93,7 +93,7 @@ The tidy dataset contain all the following features:
 * FrequencyBodyGyroscopeMagnitude
 * FrequencyBodyGyroscopeJerkMagnitude
 
-With the following measures:
+With the following measures for each features:
 
 * Mean
 * StandardDeviation
