@@ -37,7 +37,7 @@ These steps are derived to the following requirements from Getting and Cleaning 
 **./run_analysis.R**  
 	The source to run the collect, clean the raw dataset, and produce the tidy dataset. Use ./src/har_dataset.R
 
-**./out/har_dataset.txt**  
+**./out/uci_har_dataset_tidy.txt**  
 	The tidy dataset generated in the analysis (although this file is not necessary into the source control, we put it for academic reasons only)
 
 # Project Dependencies
@@ -52,12 +52,123 @@ Although we thought that the project can be run into other *nix platforms withou
 
 This project was only executed on Linux Ubuntu platform.
 
-# How to Clean and Prepare Tidy Data
+# How to Clean and Prepare Tidy Dataset
 
 1. Clone this repository
 2. Run ./run_analysis.R to perform steps from 1 to 7
-3. Check ./out/har_dataset.txt for tidy dataset
 
 You can check ./run_analysis.R to verify how to use ./src/har_dataset.R. 
 
-# Dataset Code Book
+# Check Tidy Dataset
+
+You can read ./out/uci_har_dataset_tidy.txt
+
+```
+dataset <- read.table("./out/uci_har_dataset_tidy.txt", header = TRUE)
+dim(dataset)
+[1] 180  68
+
+```
+
+# The Dataset Code Book
+
+## Base Reference
+
+The tidy dataset contain all the following features:
+
+TimeBodyAccelerometer-XYZ
+TimeGravityAccelerometer-XYZ
+TimeBodyAccelerometerJerk-XYZ
+TimeBodyGyroscope-XYZ
+TimeBodyGyroscopeJerk-XYZ
+TimeBodyAccelerometerMagnitude
+TimeGravityAccelerometerMagnitude
+TimeBodyAccelerometerJerkMagnitude
+TimeBodyGyroMagnitude
+TimeBodyGyroJerkMagnitude
+FrequencyBodyAccelerometer-XYZ
+FrequencyBodyAccelerometerJerk-XYZ
+FrequencyBodyGyroscope-XYZ
+FrequencyBodyAccMagnitude
+FrequencyBodyAccJerkMagnitude
+FrequencyBodyGyroscopeMagnitude
+FrequencyBodyGyroscopeJerkMagnitude
+
+With the following measures:
+
+Mean
+StandardDeviation
+
+## All Dataset Features
+
+| Name | Data Type | Description
+| ActivityName | Character |  The descriptive activity name  |
+| Subject | Integer |  The subject identifier (vary from 1 to 30)  |
+| 
+| TimeBodyAccelerometerMeanX | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerMeanY | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerMeanZ | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerMeanX | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerMeanY | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerMeanZ | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkMeanX | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkMeanY | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkMeanZ | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkStandardDeviationX | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkStandardDeviationY | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkStandardDeviationZ | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeMeanX | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeMeanY | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeMeanZ | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeStandardDeviationX | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeStandardDeviationY | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeStandardDeviationZ | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkMeanX | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkMeanY | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkMeanZ | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkStandardDeviationX | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkStandardDeviationY | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkStandardDeviationZ | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
+| TimeGravityAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkMagnitudeMean | Numeric |  see base reference definition  |
+| TimeBodyAccelerometerJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeMagnitudeMean | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkMagnitudeMean | Numeric |  see base reference definition  |
+| TimeBodyGyroscopeJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerMeanX | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerMeanY | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerMeanZ | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkMeanX | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkMeanY | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkMeanZ | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkStandardDeviationX | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkStandardDeviationY | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerJerkStandardDeviationZ | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeMeanX | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeMeanY | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeMeanZ | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeStandardDeviationX | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeStandardDeviationY | Numeric |  see base reference definition  |
+| FrequencyBodyGyroscopeStandardDeviationZ | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
+| FrequencyBodyAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| FrequencyBodyBodyAccelerometerJerkMagnitudeMean | Numeric |  see base reference definition  |
+| FrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| FrequencyBodyBodyGyroscopeMagnitudeMean | Numeric |  see base reference definition  |
+| FrequencyBodyBodyGyroscopeMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+| FrequencyBodyBodyGyroscopeJerkMagnitudeMean | Numeric |  see base reference definition  |
+| FrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
+
