@@ -6,7 +6,7 @@ The purpose of this project is collect and clean the UCI HAR Dataset to prepare 
 
 This document provide information about the project structure and dependencies, how to collect and clean the raw dataset, and how to check the tidy dataset.
 
-For information about the tidy dataset can be obtained into the [Code Book](http://github.com/tartalia/UCI_HAR_Dataset_Tidy/CodeBook.md).
+For more information about the raw and tidy dataset, follow the dataset [Code Book](https://github.com/tartalia/UCI_HAR_Dataset_Tidy/blob/master/CodeBook.md).
 
 # Project Structure
 
