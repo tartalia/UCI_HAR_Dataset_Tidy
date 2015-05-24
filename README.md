@@ -100,8 +100,8 @@ With the following measures:
 
 ## All Dataset Features
 
-| Name | Data Type | Description|
-|------|-----------|------------|
+| Name | Data Type | Description |
+|:-----|:--------- |:----------- |
 |ActivityName   |Character|The descriptive activity name             |
 |Subject        |Integer  |The subject identifier (vary from 1 to 30)|
 |TimeBodyAccelerometerMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
