@@ -13,7 +13,7 @@ For more information about the raw and tidy dataset, see [Code Book](https://git
 **./README.md**  
 	This file.
 
-**./CodeBook.md  
+**./CodeBook.md**  
 	The dataset code book.
 
 **./src/har_dataset.R**  
@@ -34,7 +34,7 @@ This project was built with and depends on:
 * Platform: x86_64-pc-linux-gnu (64-bit)
 * dplyr version 0.4.1
 
-Although we thought that the project can be run into other *nix platforms without problems, maybe there's some limitation to run on Windows platform due to file system differences.
+Although we thought that the project can be run in others *nix platforms without problems, maybe there's some limitation to run on Windows platform due to file system differences.
 
 # How to Collect, Clean and Generate Tidy Dataset
 
