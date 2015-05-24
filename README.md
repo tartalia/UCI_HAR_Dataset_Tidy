@@ -6,16 +6,21 @@ The purpose of this project is collect and clean the UCI HAR Dataset to prepare 
 
 This document provide information about the project structure and dependencies, how to collect and clean the raw dataset, and how to check the tidy dataset.
 
+For information about the tidy dataset can be obtained into the [Code Book](http://github.com/tartalia/UCI_HAR_Dataset_Tidy/CodeBook.md).
+
 # Project Structure
 
 **./README.md**  
-	This file
+	This file.
+
+**./CodeBook.md  
+	The dataset code book.
 
 **./src/har_dataset.R**  
 	The source that contain all the logic to collect and clean the raw dataset. In fact, this source can be thought as a library ou API to manipulate the UCI HAR dataset to get and clean the raw dataset, with the capabilities needed to produce the tidy dataset.
 
 **./run_analysis.R**  
-	The source to run the collect, clean the raw dataset, and produce the tidy dataset. Use ./src/har_dataset.R
+	The source to run the collect, clean the raw dataset, and produce the tidy dataset. Use ./src/har_dataset.R.
 
 **./out/uci_har_dataset_tidy.txt**  
 	The tidy dataset generated in the analysis (although this file is not necessary into the source control, we put it for academic reasons only)
