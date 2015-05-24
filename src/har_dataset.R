@@ -23,9 +23,6 @@ har.dataset <- function() {
         mergedTrainDataset <- NULL       
         mergedDataset <- NULL
         summarizedDataset <- NULL
-        getDatasetPath <- function() datasetPath
-        getMergedTestDataset <- function() mergedTestDataset
-        getMergedTrainDataset <- function() mergedTrainDataset
         
         # control variables
         selectMeanAndStdVariables <- FALSE
