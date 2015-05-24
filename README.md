@@ -1,4 +1,4 @@
-# UCI_HAR_Dataset_Tidy
+# UCI HAR Dataset Tidy
 
 This project is part of the course Getting and Cleaning Data from Johns Hopkins University.
 
@@ -28,16 +28,16 @@ These steps are derived to the following requirements from Getting and Cleaning 
 
 # Project Structure
 
-./README.md
+**./README.md**  
 	This file
 
-./src/har_dataset.R
+**./src/har_dataset.R**  
 	The source that contain all the logic to collect and clean the raw dataset. In fact, this source can be thought as a library ou API to manipulate the UCI HAR dataset to get and clean the raw dataset, with the capabilities needed to produce the tidy dataset.
 
-./run_analysis.R
+**./run_analysis.R**  
 	The source to run the collect, clean the raw dataset, and produce the tidy dataset. Use ./src/har_dataset.R
 
-./out/har_dataset.txt
+**./out/har_dataset.txt**  
 	The tidy dataset generated in the analysis (although this file is not necessary into the source control, we put it for academic reasons only)
 
 # Project Dependencies
