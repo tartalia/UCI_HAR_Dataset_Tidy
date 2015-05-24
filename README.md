@@ -102,72 +102,71 @@ With the following measures:
 
 | Name | Data Type | Description|
 |------|-----------|------------|
-| ActivityName | Character |  The descriptive activity name  |
-| Subject | Integer |  The subject identifier (vary from 1 to 30)  |
-| TimeBodyAccelerometerMeanX | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerMeanY | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerMeanZ | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerMeanX | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerMeanY | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerMeanZ | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkMeanX | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkMeanY | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkMeanZ | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkStandardDeviationX | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkStandardDeviationY | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkStandardDeviationZ | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeMeanX | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeMeanY | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeMeanZ | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeStandardDeviationX | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeStandardDeviationY | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeStandardDeviationZ | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkMeanX | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkMeanY | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkMeanZ | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkStandardDeviationX | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkStandardDeviationY | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkStandardDeviationZ | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
-| TimeGravityAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkMagnitudeMean | Numeric |  see base reference definition  |
-| TimeBodyAccelerometerJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeMagnitudeMean | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkMagnitudeMean | Numeric |  see base reference definition  |
-| TimeBodyGyroscopeJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerMeanX | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerMeanY | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerMeanZ | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerStandardDeviationX | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerStandardDeviationY | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerStandardDeviationZ | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkMeanX | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkMeanY | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkMeanZ | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkStandardDeviationX | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkStandardDeviationY | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerJerkStandardDeviationZ | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeMeanX | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeMeanY | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeMeanZ | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeStandardDeviationX | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeStandardDeviationY | Numeric |  see base reference definition  |
-| FrequencyBodyGyroscopeStandardDeviationZ | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerMagnitudeMean | Numeric |  see base reference definition  |
-| FrequencyBodyAccelerometerMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| FrequencyBodyBodyAccelerometerJerkMagnitudeMean | Numeric |  see base reference definition  |
-| FrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| FrequencyBodyBodyGyroscopeMagnitudeMean | Numeric |  see base reference definition  |
-| FrequencyBodyBodyGyroscopeMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-| FrequencyBodyBodyGyroscopeJerkMagnitudeMean | Numeric |  see base reference definition  |
-| FrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation | Numeric |  see base reference definition  |
-
+|ActivityName   |Character|The descriptive activity name             |
+|Subject        |Integer  |The subject identifier (vary from 1 to 30)|
+|TimeBodyAccelerometerMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeGravityAccelerometerMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyAccelerometerJerkMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|TimeBodyGyroscopeJerkMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerJerkStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeMeanX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeMeanY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeMeanZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeStandardDeviationX|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeStandardDeviationY|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyGyroscopeStandardDeviationZ|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyAccelerometerMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyAccelerometerJerkMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyGyroscopeMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyGyroscopeMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyGyroscopeJerkMagnitudeMean|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
+|FrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation|Numeric|[See base reference](https://github.com/tartalia/UCI_HAR_Dataset_Tidy#base-reference)|
