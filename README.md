@@ -6,7 +6,7 @@ The purpose of this project is collect and clean the UCI HAR Dataset to prepare 
 
 This document provide information about the project structure and dependencies, how to collect and clean the raw dataset, and how to check the tidy dataset.
 
-For more information about the raw and tidy dataset, follow the dataset [Code Book](https://github.com/tartalia/UCI_HAR_Dataset_Tidy/blob/master/CodeBook.md).
+For more information about the raw and tidy dataset, see [Code Book](https://github.com/tartalia/UCI_HAR_Dataset_Tidy/blob/master/CodeBook.md).
 
 # Project Structure
 
@@ -27,20 +27,19 @@ For more information about the raw and tidy dataset, follow the dataset [Code Bo
 
 # Project Dependencies
 
-Thi project was built with and depends on:
+This project was built with and depends on:
 
+* Ubuntu 14.04.2 LTS, codename trusty
 * R version 3.2.0 (2015-04-16)
 * Platform: x86_64-pc-linux-gnu (64-bit)
 * dplyr version 0.4.1
 
 Although we thought that the project can be run into other *nix platforms without problems, maybe there's some limitation to run on Windows platform due to file system differences.
 
-This project was only executed on Linux Ubuntu platform.
-
-# How to Clean and Prepare Tidy Dataset
+# How to Collect, Clean and Generate Tidy Dataset
 
 1. Clone this repository
-2. Run ./run_analysis.R to perform steps from 1 to 7
+2. Run ./run_analysis.R
 
 You can check ./run_analysis.R to verify how to use ./src/har_dataset.R. 
 
