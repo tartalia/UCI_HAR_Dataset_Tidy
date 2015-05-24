@@ -67,7 +67,6 @@ You can read ./out/uci_har_dataset_tidy.txt
 dataset <- read.table("./out/uci_har_dataset_tidy.txt", header = TRUE)
 dim(dataset)
 [1] 180  68
-
 ```
 
 # The Dataset Code Book
@@ -76,35 +75,35 @@ dim(dataset)
 
 The tidy dataset contain all the following features:
 
-TimeBodyAccelerometer-XYZ
-TimeGravityAccelerometer-XYZ
-TimeBodyAccelerometerJerk-XYZ
-TimeBodyGyroscope-XYZ
-TimeBodyGyroscopeJerk-XYZ
-TimeBodyAccelerometerMagnitude
-TimeGravityAccelerometerMagnitude
-TimeBodyAccelerometerJerkMagnitude
-TimeBodyGyroMagnitude
-TimeBodyGyroJerkMagnitude
-FrequencyBodyAccelerometer-XYZ
-FrequencyBodyAccelerometerJerk-XYZ
-FrequencyBodyGyroscope-XYZ
-FrequencyBodyAccMagnitude
-FrequencyBodyAccJerkMagnitude
-FrequencyBodyGyroscopeMagnitude
-FrequencyBodyGyroscopeJerkMagnitude
+* TimeBodyAccelerometer-XYZ
+* TimeGravityAccelerometer-XYZ
+* TimeBodyAccelerometerJerk-XYZ
+* TimeBodyGyroscope-XYZ
+* TimeBodyGyroscopeJerk-XYZ
+* TimeBodyAccelerometerMagnitude
+* TimeGravityAccelerometerMagnitude
+* TimeBodyAccelerometerJerkMagnitude
+* TimeBodyGyroMagnitude
+* TimeBodyGyroJerkMagnitude
+* FrequencyBodyAccelerometer-XYZ
+* FrequencyBodyAccelerometerJerk-XYZ
+* FrequencyBodyGyroscope-XYZ
+* FrequencyBodyAccMagnitude
+* FrequencyBodyAccJerkMagnitude
+* FrequencyBodyGyroscopeMagnitude
+* FrequencyBodyGyroscopeJerkMagnitude
 
 With the following measures:
 
-Mean
-StandardDeviation
+* Mean
+* StandardDeviation
 
 ## All Dataset Features
 
-| Name | Data Type | Description
+| Name | Data Type | Description|
+|------|-----------|------------|
 | ActivityName | Character |  The descriptive activity name  |
 | Subject | Integer |  The subject identifier (vary from 1 to 30)  |
-| 
 | TimeBodyAccelerometerMeanX | Numeric |  see base reference definition  |
 | TimeBodyAccelerometerMeanY | Numeric |  see base reference definition  |
 | TimeBodyAccelerometerMeanZ | Numeric |  see base reference definition  |
